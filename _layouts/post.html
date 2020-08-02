@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article class="post">
+    <h2 class="post-header">{{ page.title }}</h2>
+    <p class="post-meta">{{ page.date | date: site.date_format }}</p>
+    {% if page.link %}
+    <p class="link"><a href="{{ page.link }}">{{ page.link | url_hostname }}</a></p>
+    {% endif %}
+    {{ content }}
+</article>

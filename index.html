@@ -1,0 +1,38 @@
+---
+layout: default
+title: main
+pagination:
+  enabled: true
+  per_page: 12
+  sort_reverse: true
+---
+
+<div class="home">
+    <div class="posts">
+        {% for post in paginator.posts %}
+        <div class="item">
+            <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+            <div>{{ post.date | date: site.date_format }}</div>
+            {% if post.link %}
+            <p class="link"><a href="{{ post.link }}">{{ post.link | url_hostname }}</a></p>
+            {% endif %}
+            {% if post.description %}
+            <p class="description">{{ post.description }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="nav">
+        {% if paginator.previous_page %}
+        <a class="button active" href="{{ paginator.previous_page_path | relative_url }}">Back</a>
+        {% else %}
+        <span class="button">Back</span>
+        {% endif %}
+
+        {% if paginator.next_page %}
+        <a class="button active" href="{{ paginator.next_page_path | relative_url }}">More</a>
+        {% else %}
+        <span class="button">More</span>
+        {% endif %}
+    </div>
+</div>

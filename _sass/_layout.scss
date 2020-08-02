@@ -1,0 +1,107 @@
+@charset "utf-8";
+main {
+    max-width: 55rem;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+.site-header {
+    .site-title {
+        font-weight: 300;
+        > a {
+            color: $text-color;
+            text-decoration: none;
+        }
+    }
+    .site-nav {
+        > a {
+            color: $text-color;
+            &:hover {
+                text-decoration: none;
+            }
+            &.active {
+                border-bottom: 2px solid #666;
+            }
+            + a {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+.posts {
+    columns: 3 200px;
+    column-gap: 3rem;
+    margin-left: -1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    padding: 0;
+    > div.item {
+        width: 150px;
+        border: medium solid $border-color;
+        margin: 0 1rem 1rem 0;
+        padding: 1rem;
+        padding-top: 0;
+        display: inline-block;
+        border-radius: 20px;
+        width: 100%;
+        h2 {
+            text-align: center;
+            line-height: 1;
+            a {
+                color: $text-color;
+                text-decoration: none;
+            }
+        }
+        div {
+            margin-top: -1rem;
+            color: $meta-color;
+            text-align: center;
+            font-size: $small-font-size;
+        }
+        p.description {
+            line-height: 1.25;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+    }
+}
+.nav {
+    text-align: center;
+    .button {
+        color: $meta-color;
+        border: thin solid $meta-color;
+        padding: 1rem;
+        display: inline-block;
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
+    .button.active {
+        color: $text-color;
+    }
+}
+.post {
+    position: relative;
+    .post-header {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .post-meta {
+        margin: 0;
+        text-align: center;
+        color: $meta-color;
+        font-size: $small-font-size;
+    }
+    .link {
+        text-align: center;
+    }
+}
+p.link a::before {
+    content: "🔗\00a0";
+}
+@media screen and (max-width: 48rem) {
+    .site-header {
+        .site-title,
+        .site-nav {
+            text-align: center;
+        }
+    }
+}

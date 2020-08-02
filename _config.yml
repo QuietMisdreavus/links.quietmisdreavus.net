@@ -1,0 +1,12 @@
+title: quiet hyperlinks
+description: things found around the internet by a quiet misdreavus
+baseurl: ""
+url: "https://links.quietmisdreavus.net"
+
+date_format: "%a %Y-%m-%d"
+
+plugins:
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
