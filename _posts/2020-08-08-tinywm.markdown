@@ -1,0 +1,12 @@
+---
+layout: post
+title: tinywm
+description: an extremely minimal window manager for X11 for teaching purposes
+link: "http://incise.org/tinywm.html"
+categories: links
+---
+
+i asked on twitter/mastodon about how people write window managers for Linux, and got a lot of links
+in response. someone linked me to this project, which is 50 lines of C code that links against Xlib
+to make what is probably the absolute minimum a window manager can be. the site also has a
+heavily-commented version that actually describes what's going on.
